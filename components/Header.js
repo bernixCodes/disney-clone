@@ -21,6 +21,7 @@ const Header = () => {
         width={80}
         height={80}
         className="cursor-pointer"
+        onClick={() => router.push("/")}
       />
 
       {session && (
@@ -55,7 +56,7 @@ const Header = () => {
       {!session ? (
         <button
           className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200 "
-          onClick={signIn}
+          onClick={() => signIn()}
         >
           Login
         </button>
@@ -65,8 +66,8 @@ const Header = () => {
           alt=""
           width={36}
           height={36}
-          className="ml-auto  rounded-full object-cover cursor-pointer"
-          onClick={signOut}
+          className={`ml-auto  rounded-full object-cover cursor-pointer`}
+          onClick={() => signOut()}
         />
       )}
     </div>

@@ -1,7 +1,10 @@
 import Head from "next/head";
 import "@fontsource/montserrat";
 import Header from "@/components/Header";
-import { useSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
+import Hero from "./../components/Hero";
+import Slider from "@/components/Slider";
+import Brands from "./../components/Brands";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -15,6 +18,14 @@ export default function Home() {
       </Head>
 
       <Header />
+      {!session ? (
+        <Hero />
+      ) : (
+        <main className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
+          <Slider />
+          <Brands />
+        </main>
+      )}
     </>
   );
 }

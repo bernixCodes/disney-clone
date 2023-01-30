@@ -4,7 +4,12 @@ const Brands = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 px-8 max-w-[1440px] mx-auto ">
       <div className="brand group">
-        <Image src={"/images/disnep.png"} fill style={{ objectFit: "cover" }} />
+        <Image
+          src={"/images/disnep.png"}
+          fill
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
         <video
           autoPlay
           loop
@@ -16,7 +21,12 @@ const Brands = () => {
       </div>
 
       <div className="brand group">
-        <Image src={"/images/marvel.png"} fill style={{ objectFit: "cover" }} />
+        <Image
+          src={"/images/marvel.png"}
+          fill
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
         <video
           autoPlay
           loop
@@ -32,6 +42,7 @@ const Brands = () => {
           src={"/images/national-geographic.png"}
           fill
           style={{ objectFit: "cover" }}
+          alt=""
         />
         <video
           autoPlay
@@ -47,7 +58,12 @@ const Brands = () => {
       </div>
 
       <div className="brand group">
-        <Image src={"/images/pixar.png"} fill style={{ objectFit: "cover" }} />
+        <Image
+          src={"/images/pixar.png"}
+          fill
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
         <video
           autoPlay
           loop
@@ -63,6 +79,7 @@ const Brands = () => {
           src={"/images/starwars.png"}
           fill
           style={{ objectFit: "cover" }}
+          alt=""
         />
         <video
           autoPlay

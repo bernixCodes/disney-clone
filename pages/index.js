@@ -22,7 +22,7 @@ export default function Home({
         <title>Disney Clone</title>
         <meta name="description" content="Disney, your dream land!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.svg" />
       </Head>
 
       <Header />
@@ -58,13 +58,13 @@ export async function getServerSideProps(context) {
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.movieApiKey}&language=en-US&page=1`
     ),
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.movieApiKey}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.movieApiKey}&language=en-US&page=2`
     ),
     fetch(
       `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.movieApiKey}&language=en-US&page=1`
     ),
     fetch(`
-      https://api.themoviedb.org/3/tv/popular?api_key=${process.env.movieApiKey}&language=en-US&page=1`),
+      https://api.themoviedb.org/3/tv/popular?api_key=${process.env.movieApiKey}&language=en-US&page=2`),
   ]);
 
   const [upcomingMovies, popularMovies, topRatedShows, popularShows] =
@@ -80,7 +80,7 @@ export async function getServerSideProps(context) {
       upcomingMovies: upcomingMovies.results,
       popularMovies: popularMovies.results,
       topRatedShows: topRatedShows.results,
-      popularShows: topRatedShows.results,
+      popularShows: popularShows.results,
     },
   };
 }
